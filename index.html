@@ -2,49 +2,60 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>guild</title>
-    <link rel="stylesheet" href="css/style.css"></style>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="img/site.webmanifest">
+  <meta charset="utf-8">
+  <title>guild</title>
+  <link rel="stylesheet" href="css/style.css">
+  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
 </head>
 
 <body>
-  <div id="particle-container">
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  	<div class="particle"></div>
-  </div>
 
+  <div class="row" id="wrapper">
+    <div class="left-column" id="bg-gradient">
+      <h1>Guild</h1>
+      <p>a comprehensive manual for building intentional communities + kinship during a chaotic era</p>
+    </div>
+    <div class="lines">
+      <div class="line"></div>
+    </div>
+    <div class="right-column">
+      <a id="menu-item" href="#"><h2>The Workshop</h2></a>
+      <hr>
+      <a id="menu-item" href="#"><h2>The Manual</h2></a>
+      <hr>
+      <a id="menu-item" href="#"><h2>The Ongoing Effort</h2></a>
+      <hr>
+      <a id="menu-item" href="#"><h2>The Reason</h2></a>
+
+    </div>
+
+  </div>
+  
+  <script src="js/script.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/three.r119.min.js"></script>
+  <script src="js/vanta.fog.min.js"></script>
+  <script>
+  VANTA.FOG({
+    el: "#bg-gradient",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0xd9f50e,
+    midtoneColor: 0x599307,
+    lowlightColor: 0x30640b,
+    baseColor: 0x3d6b00,
+    blurFactor: 0.90,
+    speed: 5.00,
+    zoom: 0.40
+  })
+  </script>
 
 </body>
 
