@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>the workshop</title>
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="ascensorBuilding">
+      <div class="floor floor-1"><span class="text">
+          <h2>Curating the Space</h2><br><img src="img/table.jpg"><br><br><br>
+          <p>It is essential for the first perspective guild member meeting that the initiators of the project curate space the meeting will be held in order to be considerate of the attendees’ time and energy. Be sure to have a unanimously agreed upon time and space to meet whether digital or in person. This is key so that the energy of the meeting will be high because every person feels they have their own autonomy when it comes to participation and they won’t be mentally halfway out the door because of other engagements. Guild meetings shouldn’t feel like 9 to 5 conferences, but rather causal time for discussion and explorations of micro issues/solutions. I would expect a guild meeting to last <b>one and a half to two hours.</b>
+        </span></p>
+      </div>
+      <div class="floor floor-2"><span class="text">
+          <h2>Setting Intentions</h2><br><img src="img/candle.jpg"><br><br><br>
+          <p>Regardless of familiarity, everyone should introduce themselves. This is a presentation of the present you and it will be nice to remember back to as your guild evolves. Each person should say their name, pronouns, why they wanted to join the intentional community, and what they need in order to maintain a healthy relationship. The <b>time for this is variable</b> based on the number of folks at the meeting, but do try to keep people on the subject by guiding the discussion.
+        </span></p>
+      </div>
+      <div class="floor floor-3"><span class="text">
+          <h2>Understanding Self + Whole</h2><br><img src="img/sprout.jpg"><br><br><br>
+          <p>During this segment, participants should map out what skills they have outside of collecting capital and how they intersect. In the form of a sprout-like mindmap, branch out the areas of confidence (roots) and areas of intended growth (leaves). Making these maps should take about fifteen minutes. After the maps have been finished to the best of one’s ability, go around and share the areas of strength and growth. This will help when thinking of ways of contributing to the collective.
+        </span></p>
+      </div>
+      <div class="floor floor-4"><span class="text">
+          <h2>Being Present</h2><br><img src="img/mirror.jpg"><br><br><br>
+          <p>Based on the skills in the group at hand, start to form roles for the members to fulfill. Many guilds have members focus on crafts that differ to allow for cross-collaboration. This is also a time for considering folks' personality types and affinities emotionally. Roles should be fluid enough that others can offer assistance when necessary.
+        </span></p>
+      </div>
+      <div class="floor floor-5"><span class="text">
+          <h2>Laying the Groundwork</h2><br><img src="img/brick.jpg"><br><br><br>
+          <p>Finally, now that everyone has an understanding of the skills and people in the mix there can be a couple of key goals. Perhaps they’re localized issues everyone would like to address or maybe a new medium everyone can collectively dive into. I would set a maximum  of three to start and set time based measuring. It can also be nice to think of goals in a seasonal way with check-in meetings and hangouts as time continues.
+        </span></p>
+      </div>
+      <div class="floor floor-6"><span class="text">
+          <h2>Making Peace</h2><br><img src="img/shadow.jpg"><br><br><br>
+          <p>Now that the meeting is wrapping up, think about when you all would like to return to discussion and hangout again. It might be nice to set intentions for a future meeting based on the goals set previously. Meet within the next two weeks at the latest. Remember you’re in close proximity! Don’t let your connections slip by. 
+        </span></p>
+      </div>
+    </div>
+
+    <nav id="slider-bg">
+      <ul class="links-to-floor">
+        <li><a>circumstances</a></li>
+        <li><a>introductions</a></li>
+        <li><a>skill trees</a></li>
+        <li><a>manifesting roles</a></li>
+        <li><a>continuing on</a></li>
+        <li><a>closing</a></li>
+      </ul>
+      <div class="home-button">
+        <a href="index.html">
+          ← Back to Home
+        </a>
+      </div>
+    </nav>
+
+    <div class="faded-bottom">
+      Use the ⇦ or ⇨ arrowkeys to view the next section.
+      <div>
+
+      </div>
+      <script src="js/script.js"></script>
+      <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+      <script src="js/jquery.ascensor.min.js"></script>
+      <script>
+        var ascensor = $('#ascensorBuilding').ascensor({
+          direction: "x"
+        }, {
+          loop: "true"
+        });
+        var ascensorInstance = $('#ascensorBuilding').data('ascensor');
+
+
+        $(".links-to-floor li").click(function(event, index) {
+          ascensorInstance.scrollToFloor($(this).index());
+
+        });
+
+        $(".links-to-floor li:eq(" + ascensor.data("current-floor") + ")").addClass("selected");
+
+        ascensor.on("scrollStart", function(event, floor) {
+          $(".links-to-floor li").removeClass("selected");
+          $(".links-to-floor li:eq(" + floor.to + ")").addClass("selected");
+        });
+      </script>
+      <script src="js/three.r119.min.js"></script>
+      <script src="js/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+          el: "#slider-bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          highlightColor: 0xd9f50e,
+          midtoneColor: 0x599307,
+          lowlightColor: 0x30640b,
+          baseColor: 0x3d6b00,
+          blurFactor: 0.90,
+          speed: 5.00,
+          zoom: 0.10
+        })
+      </script>
+      <script src="js/functions.js"></script>
+
+</body>
+
+</html>

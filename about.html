@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>about guilds</title>
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="ascensorBuilding">
+      <div class="floor floor-1"><span class="text">
+          <h2>The Origin of Guilds:</h2><br>
+          <audio id="player" controls>
+            <source src="mp3/origin.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <br>
+          <br>
+          <img src="img/oldguild.jpg" alt="Men from the Middle Ages dressed in frumpy Pilgrim like black gowns sat around a table, covered by a decorative red and gold rug, with an open book placed atop." title="Men from the Middle Ages dressed in frumpy Pilgrim like black gowns sat around a table, covered by a decorative red and gold rug, with an open book placed atop."><br><br><br>
+          <p>In contrast to the land-bound serfs, townspeople of the Middle Ages were free. Some engaged in commerce and formed groups known as merchant guilds. The majority, however, were small merchant-craftsmen, organized in craft guilds as
+            masters (of highest accomplishment and status), journeymen (at a middle level), and apprentices (beginners). The medieval master was typically many things at once: a skilled workman himself; a foreman, supervising journeymen and
+            apprentices; an employer; a buyer of raw or semifinished materials; and a seller of finished products. Because medieval craftsmen employed simple hand tools, a workman’s own skill determined the quantity and quality of his output.
+            Apprentices and journeymen underwent long periods of learning under the guidance of a more experienced workman. When he could produce a “masterpiece” that met the approval of the guild masters, the craftsman would gain full admission into
+            the guild.
+        </span></p>
+      </div>
+      <div class="floor floor-2"><span class="text">
+          <h2>Why Guilds?</h2><br><img src="img/apartment.jpg"><br><br><br>
+          <p>During this time of social distancing, COVID-19, community in-fighting, and isolation, there is a stronger need than ever for building kinship. There aren’t many platforms or systems for creating deep connections with others outside of
+            the realm of romantic intentions or capitalist interests. Creating space and dedicating time to build genuine relationships with folks who live in close proximity is the path for the future. Local peer networks made up of individuals who
+            share similar ideologies can create spires of power that can lead to real change and meet the material needs of its participants. Historically mutual aid networks have been successful, but a stumbling block has been scaling up too far,
+            too fast. The process of creating small guilds should focus on peer learning and the management of community knowledge pools. Sharing and exchanging knowledge through gamification and organic discussion is what will make the future of
+            guilds the support system we need during these trying times.
+        </span></p>
+      </div>
+      <div class="floor floor-3"><span class="text">
+          <h2>The Legacy of Guilds:</h2><br><img src="img/stoop.jpg"><br><br><br>
+          <p>From the street stoop to the house party, the transfer of knowledge for the sake of empowerment through generational peer networks have always helped marginalized communities get closer to prosperity. By using our imaginations and
+            collective dreaming we can build a new world in our local reality at small scales that can inspire change in far-off networks. The human technologies at our disposal allow us to garner the warmth and fellowship that has been missing from
+            the public discourse of the present. Sometimes you don’t need the newest techniques to solve old problems. This webspace hopes to combine the old and the new to foster sustaining communities.
+        </span></p>
+      </div>
+    </div>
+
+    <nav id="slider-bg">
+      <ul class="links-to-floor">
+        <li><a>the origin</a></li>
+        <li><a>why guilds</a></li>
+        <li><a>legacy of guilds</a></li>
+      </ul>
+      <div class="home-button">
+        <a href="index.html">
+          ← Back to Home
+        </a>
+      </div>
+    </nav>
+
+    <div class="faded-bottom">
+      Use the ⇦ or ⇨ arrowkeys to view the next section.
+      <div>
+
+      </div>
+      <script src="js/script.js"></script>
+      <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+      <script src="js/jquery.ascensor.min.js"></script>
+      <script>
+        var ascensor = $('#ascensorBuilding').ascensor({
+          direction: "x"
+        }, {
+          loop: "true"
+        });
+        var ascensorInstance = $('#ascensorBuilding').data('ascensor');
+
+
+        $(".links-to-floor li").click(function(event, index) {
+          ascensorInstance.scrollToFloor($(this).index());
+
+        });
+
+        $(".links-to-floor li:eq(" + ascensor.data("current-floor") + ")").addClass("selected");
+
+        ascensor.on("scrollStart", function(event, floor) {
+          $(".links-to-floor li").removeClass("selected");
+          $(".links-to-floor li:eq(" + floor.to + ")").addClass("selected");
+        });
+      </script>
+      <script src="js/three.r119.min.js"></script>
+      <script src="js/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+          el: "#slider-bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          highlightColor: 0xd9f50e,
+          midtoneColor: 0x599307,
+          lowlightColor: 0x30640b,
+          baseColor: 0x3d6b00,
+          blurFactor: 0.90,
+          speed: 5.00,
+          zoom: 0.10
+        })
+      </script>
+      <script src="js/functions.js"></script>
+
+</body>
+
+</html>
